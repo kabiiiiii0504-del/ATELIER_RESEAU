@@ -121,7 +121,7 @@ a-t-il appris la MAC ? Expliquez pourquoi, en vous aidant de la fiche théorique
 
 > 💬 **Votre réponse :**
 >
-> _Remplacez ce texte par votre réponse._
+> Le client a appris la MAC de 172.20.1.254, l’adresse du routeur (sa passerelle par défaut). 172.20.0.10 est dans un autre réseau que le client, et ARP ne fonctionne que sur le réseau local : le client ne peut donc pas lui envoyer de trame directement. Il envoie le paquet à sa passerelle, et pour cela il doit connaître la MAC du routeur, qu’il obtient par une requête ARP. Le paquet IP garde 172.20.0.10 comme destination, mais la trame Ethernet est adressée à la MAC du routeur, qui se charge ensuite de transmettre le paquet vers l’autre réseau.
 
 ---
 
