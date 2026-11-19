@@ -104,7 +104,7 @@ eu besoin de cette information **avant** de pouvoir envoyer le ping ?
 
 > 💬 **Votre réponse :**
 >
-> _Remplacez ce texte par votre réponse._
+> _172.20.1.2 dev eth0 lladdr aa:bb:cc:dd:ee:ff REACHABLE._
 
 ### Étape 5 — Joindre une machine d'un autre réseau
 
