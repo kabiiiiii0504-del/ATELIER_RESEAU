@@ -65,7 +65,7 @@ ip route
 
 > 💬 **Votre réponse :**
 >
-> _Remplacez ce texte par votre réponse._
+> _172.20.1.254, c’est le routeur du lab.._
 
 ---
 
