@@ -141,7 +141,7 @@ cette différence ? (Indice : chaque routeur traversé diminue le TTL de 1.)
 
 > 💬 **Votre réponse :**
 >
-> _Remplacez ce texte par votre réponse._
+> Vers le routeur : ttl=64. Vers le site web (172.20.0.10) : ttl=63. Ils ne sont pas identiques. La différence de 1 signifie qu’un routeur a été traversé entre le client et le site web : chaque routeur retire 1 au TTL. Le routeur lui-même est sur le même réseau que le client, donc aucun saut intermédiaire.
 
 ### Étape 7 — traceroute
 
@@ -158,7 +158,7 @@ Dessinez (en texte) le chemin suivi : `client → … → internet`.
 
 > 💬 **Votre réponse :**
 >
-> _Remplacez ce texte par votre réponse._
+> Il y a 2 sauts. Le premier saut est 172.20.1.254 (le routeur), le second est 172.20.0.10 (le site web).
 
 ### Étape 8 — Le lab est isolé
 
@@ -172,7 +172,7 @@ ping -c 2 -W 2 8.8.8.8
 
 > 💬 **Votre réponse :**
 >
-> _Remplacez ce texte par votre réponse._
+> Le ping ne reçoit aucune réponse : 100% packet loss (ou « Network is unreachable »). Le lab est isolé : derrière le routeur il n’y a que les réseaux du lab (172.20.1.0/24 et 172.20.0.0/24), sans liaison vers le vrai Internet. Le paquet vers 8.8.8.8 est envoyé à la passerelle, qui n’a aucune route vers l’extérieur et l’abandonne.
 
 ---
 
@@ -182,18 +182,18 @@ ping -c 2 -W 2 8.8.8.8
 
 | Notion        | Explication en une phrase |
 | ------------- | ------------------------- |
-| Adresse IP    | …                         |
-| Adresse MAC   | …                         |
-| Passerelle    | …                         |
-| ARP           | …                         |
-| TTL           | …                         |
+| Adresse IP    |Adresse logique d’une machine, qui permet de la router d’un réseau à l’autre.                       |
+| Adresse MAC   | Adresse physique de la carte réseau, utilisée pour livrer une trame sur le réseau local.                         |
+| Passerelle    | Le routeur vers lequel le client envoie tout ce qui est destiné à un autre réseau.                        |
+| ARP           | Protocole qui retrouve la MAC correspondant à une IP du réseau local.                       |
+| TTL           | Compteur diminué de 1 à chaque routeur traversé, qui évite qu’un paquet circule indéfiniment.                      |
 
 **Question D.2.** Vrai ou faux ? Justifiez : « Pour envoyer un paquet à `172.20.0.10`, le client met
 dans la trame la MAC de `172.20.0.10`. »
 
 > 💬 **Votre réponse :**
 >
-> _Remplacez ce texte par votre réponse._
+> Faux
 
 ---
 
