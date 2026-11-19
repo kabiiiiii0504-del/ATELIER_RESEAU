@@ -193,7 +193,7 @@ dans la trame la MAC de `172.20.0.10`. »
 
 > 💬 **Votre réponse :**
 >
-> Faux
+> Faux 172.20.0.10 est sur un autre réseau que le client : la trame contient la MAC du routeur (la passerelle), pas celle du site web. Seule l’adresse IP de destination du paquet reste 172.20.0.10 de bout en bout, alors que la MAC de destination change à chaque saut.
 
 ---
 
